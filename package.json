@@ -1,0 +1,22 @@
+{
+  "name": "svelte-google-search-clone",
+  "version": "0.0.1",
+  "description": "Google Search clone with Svelte",
+  "main": "index.js",
+  "repository": "https://github.com/alex-parra/svelte-google-search-clone.git",
+  "author": "Alex Parra <alexpds@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-svelte": "^4.0.4",
+    "sass": "^1.23.0",
+    "svelte": "^3.12.1"
+  },
+  "browserslist": [
+    "last 1 chrome versions"
+  ],
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  }
+}
