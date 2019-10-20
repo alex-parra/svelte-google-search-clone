@@ -1,11 +1,13 @@
 <script>
-  export let name;
+  import Router from 'svelte-spa-router';
+  import routes from './routes';
 </script>
 
-<style>
-  h1 {
-    text-align: center;
-  }
-</style>
+<div class="appRoot">
 
-<h1>Hello {name}!</h1>
+  <main>
+    <Router {routes} />
+  </main>
+  <footer>Made by Alex Parra on Oct 19<sup>th</sup>, 2019</footer>
+
+</div>
