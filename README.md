@@ -1,5 +1,7 @@
 # Google Search clone with Svelte
 
+Preview: http://svelte-google-search-clone.alexpds.com/
+
 #### by Alex Parra 
 
 ## Features
