@@ -1,21 +1,23 @@
 <script>
+  import { push } from 'svelte-spa-router';
   import Letters from '~/components/Letters.svelte';
 
   const text = 'Seek&Find';
 </script>
 
-<h1 class="siteName">
+<h1 class="siteName" on:click={ev => push('/')}>
   <Letters {text} />
 </h1>
 
 <style>
 
 .siteName {
-  margin: 0 0 24px;
+  margin: 0 0 20px;
   text-align: center;
   color: #343a40;
   font-size: 50px;
   line-height: 1;
+  cursor: pointer;
 }
 
 .siteName :global(span:nth-child(1)) { color: #5187ED; }

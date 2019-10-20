@@ -5,6 +5,6 @@ export default {
 
   '/': Home,
 
-  '/results': SearchResults
+  '/results/:query?': SearchResults
 
 }
