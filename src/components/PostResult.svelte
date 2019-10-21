@@ -21,6 +21,8 @@
     display: block;
     font-size: 14px;
     color: #888;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   .post .infos {
@@ -48,7 +50,7 @@
 {#if post}
   <article class="post">
     <h2>
-      <small>{post.domain}</small>
+      <small>{post.domain || ''}</small>
       <a href={post.url} target="_blank">{post.title}</a>
     </h2>
     <p class="infos">
