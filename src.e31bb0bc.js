@@ -3654,17 +3654,17 @@ const file = "components/PostResult.svelte";
 
 function add_css() {
   var style = (0, _internal.element)("style");
-  style.id = 'svelte-16y9t9c-style';
-  style.textContent = ".post.svelte-16y9t9c{text-align:left;padding:20px}.post.svelte-16y9t9c h2.svelte-16y9t9c{margin:0;font-weight:normal;font-size:22px}.post.svelte-16y9t9c h2 small.svelte-16y9t9c{display:block;font-size:14px;color:#888}.post.svelte-16y9t9c .infos.svelte-16y9t9c{margin:0;display:flex}.post.svelte-16y9t9c .infos span.svelte-16y9t9c{flex:0 0 auto;display:flex;align-items:center;color:#444}.post.svelte-16y9t9c .infos span.svelte-16y9t9c svg{width:16px;margin-right:7px}.post .infos span+span.svelte-16y9t9c{margin-left:20px}\n";
+  style.id = 'svelte-fe7a2r-style';
+  style.textContent = ".post.svelte-fe7a2r{text-align:left;padding:20px}.post.svelte-fe7a2r h2.svelte-fe7a2r{margin:0;font-weight:normal;font-size:22px}.post.svelte-fe7a2r h2 small.svelte-fe7a2r{display:block;font-size:14px;color:#888;overflow:hidden;text-overflow:ellipsis}.post.svelte-fe7a2r .infos.svelte-fe7a2r{margin:0;display:flex}.post.svelte-fe7a2r .infos span.svelte-fe7a2r{flex:0 0 auto;display:flex;align-items:center;color:#444}.post.svelte-fe7a2r .infos span.svelte-fe7a2r svg{width:16px;margin-right:7px}.post .infos span+span.svelte-fe7a2r{margin-left:20px}\n";
   (0, _internal.append_dev)(document.head, style);
-} // (48:0) {#if post}
+} // (50:0) {#if post}
 
 
 function create_if_block(ctx) {
   var article,
       h2,
       small,
-      t0_value = ctx.post.domain + "",
+      t0_value = ctx.post.domain || '' + "",
       t0,
       t1,
       a,
@@ -3675,18 +3675,23 @@ function create_if_block(ctx) {
       p,
       span0,
       t4,
-      t5_value = ctx.post.user + "",
+      t5_value = ctx.post.id + "",
       t5,
       t6,
       span1,
       t7,
-      t8_value = ctx.post.time_ago + "",
+      t8_value = ctx.post.user + "",
       t8,
       t9,
       span2,
       t10,
-      t11_value = ctx.post.comments_count + "",
+      t11_value = ctx.post.time_ago + "",
       t11,
+      t12,
+      span3,
+      t13,
+      t14_value = ctx.post.comments_count + "",
+      t14,
       current;
   var svgclock = new _SvgClock.default({
     $$inline: true
@@ -3706,35 +3711,41 @@ function create_if_block(ctx) {
       t3 = (0, _internal.space)();
       p = (0, _internal.element)("p");
       span0 = (0, _internal.element)("span");
-      t4 = (0, _internal.text)("@ ");
+      t4 = (0, _internal.text)("# ");
       t5 = (0, _internal.text)(t5_value);
       t6 = (0, _internal.space)();
       span1 = (0, _internal.element)("span");
-      svgclock.$$.fragment.c();
-      t7 = (0, _internal.space)();
+      t7 = (0, _internal.text)("@ ");
       t8 = (0, _internal.text)(t8_value);
       t9 = (0, _internal.space)();
       span2 = (0, _internal.element)("span");
-      svgcomment.$$.fragment.c();
+      svgclock.$$.fragment.c();
       t10 = (0, _internal.space)();
       t11 = (0, _internal.text)(t11_value);
-      (0, _internal.attr_dev)(small, "class", "svelte-16y9t9c");
-      (0, _internal.add_location)(small, file, 50, 6, 747);
+      t12 = (0, _internal.space)();
+      span3 = (0, _internal.element)("span");
+      svgcomment.$$.fragment.c();
+      t13 = (0, _internal.space)();
+      t14 = (0, _internal.text)(t14_value);
+      (0, _internal.attr_dev)(small, "class", "svelte-fe7a2r");
+      (0, _internal.add_location)(small, file, 52, 6, 798);
       (0, _internal.attr_dev)(a, "href", a_href_value = ctx.post.url);
       (0, _internal.attr_dev)(a, "target", "_blank");
-      (0, _internal.add_location)(a, file, 51, 6, 782);
-      (0, _internal.attr_dev)(h2, "class", "svelte-16y9t9c");
-      (0, _internal.add_location)(h2, file, 49, 4, 736);
-      (0, _internal.attr_dev)(span0, "class", "user svelte-16y9t9c");
-      (0, _internal.add_location)(span0, file, 54, 6, 872);
-      (0, _internal.attr_dev)(span1, "class", "timeAgo svelte-16y9t9c");
-      (0, _internal.add_location)(span1, file, 55, 6, 918);
-      (0, _internal.attr_dev)(span2, "class", "commentsCount svelte-16y9t9c");
-      (0, _internal.add_location)(span2, file, 56, 6, 982);
-      (0, _internal.attr_dev)(p, "class", "infos svelte-16y9t9c");
-      (0, _internal.add_location)(p, file, 53, 4, 848);
-      (0, _internal.attr_dev)(article, "class", "post svelte-16y9t9c");
-      (0, _internal.add_location)(article, file, 48, 2, 709);
+      (0, _internal.add_location)(a, file, 53, 6, 839);
+      (0, _internal.attr_dev)(h2, "class", "svelte-fe7a2r");
+      (0, _internal.add_location)(h2, file, 51, 4, 787);
+      (0, _internal.attr_dev)(span0, "class", "postId svelte-fe7a2r");
+      (0, _internal.add_location)(span0, file, 56, 6, 929);
+      (0, _internal.attr_dev)(span1, "class", "user svelte-fe7a2r");
+      (0, _internal.add_location)(span1, file, 57, 6, 975);
+      (0, _internal.attr_dev)(span2, "class", "timeAgo svelte-fe7a2r");
+      (0, _internal.add_location)(span2, file, 58, 6, 1021);
+      (0, _internal.attr_dev)(span3, "class", "commentsCount svelte-fe7a2r");
+      (0, _internal.add_location)(span3, file, 59, 6, 1085);
+      (0, _internal.attr_dev)(p, "class", "infos svelte-fe7a2r");
+      (0, _internal.add_location)(p, file, 55, 4, 905);
+      (0, _internal.attr_dev)(article, "class", "post svelte-fe7a2r");
+      (0, _internal.add_location)(article, file, 50, 2, 760);
     },
     m: function mount(target, anchor) {
       (0, _internal.insert_dev)(target, article, anchor);
@@ -3751,18 +3762,22 @@ function create_if_block(ctx) {
       (0, _internal.append_dev)(span0, t5);
       (0, _internal.append_dev)(p, t6);
       (0, _internal.append_dev)(p, span1);
-      (0, _internal.mount_component)(svgclock, span1, null);
       (0, _internal.append_dev)(span1, t7);
       (0, _internal.append_dev)(span1, t8);
       (0, _internal.append_dev)(p, t9);
       (0, _internal.append_dev)(p, span2);
-      (0, _internal.mount_component)(svgcomment, span2, null);
+      (0, _internal.mount_component)(svgclock, span2, null);
       (0, _internal.append_dev)(span2, t10);
       (0, _internal.append_dev)(span2, t11);
+      (0, _internal.append_dev)(p, t12);
+      (0, _internal.append_dev)(p, span3);
+      (0, _internal.mount_component)(svgcomment, span3, null);
+      (0, _internal.append_dev)(span3, t13);
+      (0, _internal.append_dev)(span3, t14);
       current = true;
     },
     p: function update(changed, ctx) {
-      if ((!current || changed.post) && t0_value !== (t0_value = ctx.post.domain + "")) {
+      if ((!current || changed.post) && t0_value !== (t0_value = ctx.post.domain || '' + "")) {
         (0, _internal.set_data_dev)(t0, t0_value);
       }
 
@@ -3774,16 +3789,20 @@ function create_if_block(ctx) {
         (0, _internal.attr_dev)(a, "href", a_href_value);
       }
 
-      if ((!current || changed.post) && t5_value !== (t5_value = ctx.post.user + "")) {
+      if ((!current || changed.post) && t5_value !== (t5_value = ctx.post.id + "")) {
         (0, _internal.set_data_dev)(t5, t5_value);
       }
 
-      if ((!current || changed.post) && t8_value !== (t8_value = ctx.post.time_ago + "")) {
+      if ((!current || changed.post) && t8_value !== (t8_value = ctx.post.user + "")) {
         (0, _internal.set_data_dev)(t8, t8_value);
       }
 
-      if ((!current || changed.post) && t11_value !== (t11_value = ctx.post.comments_count + "")) {
+      if ((!current || changed.post) && t11_value !== (t11_value = ctx.post.time_ago + "")) {
         (0, _internal.set_data_dev)(t11, t11_value);
+      }
+
+      if ((!current || changed.post) && t14_value !== (t14_value = ctx.post.comments_count + "")) {
+        (0, _internal.set_data_dev)(t14, t14_value);
       }
     },
     i: function intro(local) {
@@ -3810,7 +3829,7 @@ function create_if_block(ctx) {
     block,
     id: create_if_block.name,
     type: "if",
-    source: "(48:0) {#if post}",
+    source: "(50:0) {#if post}",
     ctx
   });
   return block;
@@ -3909,7 +3928,7 @@ function instance($$self, $$props, $$invalidate) {
 class PostResult extends _internal.SvelteComponentDev {
   constructor(options) {
     super(options);
-    if (!document.getElementById("svelte-16y9t9c-style")) add_css();
+    if (!document.getElementById("svelte-fe7a2r-style")) add_css();
     (0, _internal.init)(this, options, instance, create_fragment, _internal.safe_not_equal, ["post"]);
     (0, _internal.dispatch_dev)("SvelteRegisterComponent", {
       component: this,
@@ -3943,13 +3962,15 @@ var _internal = require("svelte/internal");
 
 var _svelte = require("svelte");
 
+var _svelteSpaRouter = require("svelte-spa-router");
+
+var _store = require("~/store");
+
 var _SiteName = _interopRequireDefault(require("~/components/SiteName.svelte"));
 
 var _SearchInput = _interopRequireDefault(require("~/components/SearchInput.svelte"));
 
 var _PostResult = _interopRequireDefault(require("~/components/PostResult.svelte"));
-
-var _store = require("~/store");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3958,8 +3979,8 @@ const file = "pages/SearchResults.svelte";
 
 function add_css() {
   var style = (0, _internal.element)("style");
-  style.id = 'svelte-17marat-style';
-  style.textContent = ".searchResults.svelte-17marat{text-align:center;display:flex;flex-direction:column;height:100vh}.searchResults.svelte-17marat header.svelte-17marat{flex:0 0 auto;display:flex;align-items:center;padding:10px 15px;box-shadow:0 0 4px #bbb;background-color:#fff}.searchResults.svelte-17marat .siteName{font-size:30px;margin:0 30px 0 0;flex:0 0 auto}.searchResults.svelte-17marat .inputWrap{flex:1;max-width:400px}.searchResults.svelte-17marat .inputWrap input{font-size:18px !important;padding:.3em .5em !important}.searchResults.svelte-17marat .posts.svelte-17marat{flex:1 1 auto;overflow:auto;overscroll-behavior:contain}\n";
+  style.id = 'svelte-q61mjr-style';
+  style.textContent = ".searchResults.svelte-q61mjr{text-align:center;display:flex;flex-direction:column;height:100vh}.searchResults.svelte-q61mjr header.svelte-q61mjr{flex:0 0 auto;display:flex;align-items:center;padding:10px 15px;box-shadow:0 0 4px #bbb;background-color:#fff}.searchResults.svelte-q61mjr .siteName{font-size:30px;margin:0 30px 0 0;flex:0 0 auto}.searchResults.svelte-q61mjr .inputWrap{flex:1;max-width:400px}.searchResults.svelte-q61mjr .inputWrap input{font-size:18px !important;padding:.3em .5em !important}.searchResults.svelte-q61mjr .noResults.svelte-q61mjr{padding:5vh 20px;color:#999;font-size:30px}.searchResults.svelte-q61mjr .resultsInfo.svelte-q61mjr{text-align:left;font-size:12px;color:#999;padding:10px 20px}.searchResults.svelte-q61mjr .posts.svelte-q61mjr{flex:1 1 auto;overflow:auto;overscroll-behavior:contain}\n";
   (0, _internal.append_dev)(document.head, style);
 }
 
@@ -3967,7 +3988,80 @@ function get_each_context(ctx, list, i) {
   const child_ctx = Object.create(ctx);
   child_ctx.post = list[i];
   return child_ctx;
-} // (66:4) {#each _posts as post (post.id)}
+} // (82:4) {:else}
+
+
+function create_else_block(ctx) {
+  var div,
+      t0,
+      t1_value = ctx._posts.length + "",
+      t1,
+      t2;
+  const block = {
+    c: function create() {
+      div = (0, _internal.element)("div");
+      t0 = (0, _internal.text)("Found ");
+      t1 = (0, _internal.text)(t1_value);
+      t2 = (0, _internal.text)(" matches.");
+      (0, _internal.attr_dev)(div, "class", "resultsInfo svelte-q61mjr");
+      (0, _internal.add_location)(div, file, 82, 6, 1870);
+    },
+    m: function mount(target, anchor) {
+      (0, _internal.insert_dev)(target, div, anchor);
+      (0, _internal.append_dev)(div, t0);
+      (0, _internal.append_dev)(div, t1);
+      (0, _internal.append_dev)(div, t2);
+    },
+    p: function update(changed, ctx) {
+      if (changed._posts && t1_value !== (t1_value = ctx._posts.length + "")) {
+        (0, _internal.set_data_dev)(t1, t1_value);
+      }
+    },
+    d: function destroy(detaching) {
+      if (detaching) {
+        (0, _internal.detach_dev)(div);
+      }
+    }
+  };
+  (0, _internal.dispatch_dev)("SvelteRegisterBlock", {
+    block,
+    id: create_else_block.name,
+    type: "else",
+    source: "(82:4) {:else}",
+    ctx
+  });
+  return block;
+} // (80:4) {#if _posts.length === 0}
+
+
+function create_if_block(ctx) {
+  var div;
+  const block = {
+    c: function create() {
+      div = (0, _internal.element)("div");
+      div.textContent = "No results matched your search.";
+      (0, _internal.attr_dev)(div, "class", "noResults svelte-q61mjr");
+      (0, _internal.add_location)(div, file, 80, 6, 1791);
+    },
+    m: function mount(target, anchor) {
+      (0, _internal.insert_dev)(target, div, anchor);
+    },
+    p: _internal.noop,
+    d: function destroy(detaching) {
+      if (detaching) {
+        (0, _internal.detach_dev)(div);
+      }
+    }
+  };
+  (0, _internal.dispatch_dev)("SvelteRegisterBlock", {
+    block,
+    id: create_if_block.name,
+    type: "if",
+    source: "(80:4) {#if _posts.length === 0}",
+    ctx
+  });
+  return block;
+} // (86:4) {#each _posts as post (post.id)}
 
 
 function create_each_block(key_1, ctx) {
@@ -4017,7 +4111,7 @@ function create_each_block(key_1, ctx) {
     block,
     id: create_each_block.name,
     type: "each",
-    source: "(66:4) {#each _posts as post (post.id)}",
+    source: "(86:4) {#each _posts as post (post.id)}",
     ctx
   });
   return block;
@@ -4030,6 +4124,7 @@ function create_fragment(ctx) {
       updating_searchText,
       t1,
       div0,
+      t2,
       each_blocks = [],
       each_1_lookup = new Map(),
       current;
@@ -4057,6 +4152,14 @@ function create_fragment(ctx) {
   _internal.binding_callbacks.push(() => (0, _internal.bind)(searchinput, 'searchText', searchinput_searchText_binding));
 
   searchinput.$on("doSearch", ctx.doSearch);
+
+  function select_block_type(changed, ctx) {
+    if (ctx._posts.length === 0) return create_if_block;
+    return create_else_block;
+  }
+
+  var current_block_type = select_block_type(null, ctx);
+  var if_block = current_block_type(ctx);
   let each_value = ctx._posts;
 
   const get_key = ctx => ctx.post.id;
@@ -4076,17 +4179,19 @@ function create_fragment(ctx) {
       searchinput.$$.fragment.c();
       t1 = (0, _internal.space)();
       div0 = (0, _internal.element)("div");
+      if_block.c();
+      t2 = (0, _internal.space)();
 
       for (let i = 0; i < each_blocks.length; i += 1) {
         each_blocks[i].c();
       }
 
-      (0, _internal.attr_dev)(header, "class", "svelte-17marat");
-      (0, _internal.add_location)(header, file, 59, 2, 1345);
-      (0, _internal.attr_dev)(div0, "class", "posts svelte-17marat");
-      (0, _internal.add_location)(div0, file, 64, 2, 1458);
-      (0, _internal.attr_dev)(div1, "class", "searchResults svelte-17marat");
-      (0, _internal.add_location)(div1, file, 57, 0, 1314);
+      (0, _internal.attr_dev)(header, "class", "svelte-q61mjr");
+      (0, _internal.add_location)(header, file, 73, 2, 1622);
+      (0, _internal.attr_dev)(div0, "class", "posts svelte-q61mjr");
+      (0, _internal.add_location)(div0, file, 78, 2, 1735);
+      (0, _internal.attr_dev)(div1, "class", "searchResults svelte-q61mjr");
+      (0, _internal.add_location)(div1, file, 71, 0, 1591);
     },
     l: function claim(nodes) {
       throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4099,6 +4204,8 @@ function create_fragment(ctx) {
       (0, _internal.mount_component)(searchinput, header, null);
       (0, _internal.append_dev)(div1, t1);
       (0, _internal.append_dev)(div1, div0);
+      if_block.m(div0, null);
+      (0, _internal.append_dev)(div0, t2);
 
       for (let i = 0; i < each_blocks.length; i += 1) {
         each_blocks[i].m(div0, null);
@@ -4114,6 +4221,19 @@ function create_fragment(ctx) {
       }
 
       searchinput.$set(searchinput_changes);
+
+      if (current_block_type === (current_block_type = select_block_type(changed, ctx)) && if_block) {
+        if_block.p(changed, ctx);
+      } else {
+        if_block.d(1);
+        if_block = current_block_type(ctx);
+
+        if (if_block) {
+          if_block.c();
+          if_block.m(div0, t2);
+        }
+      }
+
       const each_value = ctx._posts;
       (0, _internal.group_outros)();
       each_blocks = (0, _internal.update_keyed_each)(each_blocks, changed, get_key, 1, ctx, each_value, each_1_lookup, div0, _internal.outro_and_destroy_block, create_each_block, null, get_each_context);
@@ -4147,6 +4267,7 @@ function create_fragment(ctx) {
 
       (0, _internal.destroy_component)(sitename);
       (0, _internal.destroy_component)(searchinput);
+      if_block.d();
 
       for (let i = 0; i < each_blocks.length; i += 1) {
         each_blocks[i].d();
@@ -4179,7 +4300,7 @@ function instance($$self, $$props, $$invalidate) {
   let searchText = query || '';
 
   const doSearch = () => {
-    /* nothing to do */
+    (0, _svelteSpaRouter.push)(`/results/${searchText}`);
   };
 
   const writable_props = ['params'];
@@ -4248,7 +4369,7 @@ function instance($$self, $$props, $$invalidate) {
 class SearchResults extends _internal.SvelteComponentDev {
   constructor(options) {
     super(options);
-    if (!document.getElementById("svelte-17marat-style")) add_css();
+    if (!document.getElementById("svelte-q61mjr-style")) add_css();
     (0, _internal.init)(this, options, instance, create_fragment, _internal.safe_not_equal, ["params"]);
     (0, _internal.dispatch_dev)("SvelteRegisterComponent", {
       component: this,
@@ -4270,7 +4391,7 @@ class SearchResults extends _internal.SvelteComponentDev {
 
 var _default = SearchResults;
 exports.default = _default;
-},{"svelte/internal":"../node_modules/svelte/internal/index.mjs","svelte":"../node_modules/svelte/index.mjs","~/components/SiteName.svelte":"components/SiteName.svelte","~/components/SearchInput.svelte":"components/SearchInput.svelte","~/components/PostResult.svelte":"components/PostResult.svelte","~/store":"store.js","_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"routes.js":[function(require,module,exports) {
+},{"svelte/internal":"../node_modules/svelte/internal/index.mjs","svelte":"../node_modules/svelte/index.mjs","svelte-spa-router":"../node_modules/svelte-spa-router/Router.svelte","~/store":"store.js","~/components/SiteName.svelte":"components/SiteName.svelte","~/components/SearchInput.svelte":"components/SearchInput.svelte","~/components/PostResult.svelte":"components/PostResult.svelte","_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"routes.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -4309,7 +4430,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 const file = "App.svelte";
 
 function create_fragment(ctx) {
-  var div, main, t0, footer, t1, sup, t3, current;
+  var div, main, t0, footer, t1, a0, t3, sup, t5, t6, a1, svg, path, current;
   var router = new _svelteSpaRouter.default({
     props: {
       routes: _routes.default
@@ -4323,13 +4444,35 @@ function create_fragment(ctx) {
       router.$$.fragment.c();
       t0 = (0, _internal.space)();
       footer = (0, _internal.element)("footer");
-      t1 = (0, _internal.text)("Made by Alex Parra on Oct 19");
+      t1 = (0, _internal.text)("Made by ");
+      a0 = (0, _internal.element)("a");
+      a0.textContent = "Alex Parra";
+      t3 = (0, _internal.text)(" on Oct 19");
       sup = (0, _internal.element)("sup");
       sup.textContent = "th";
-      t3 = (0, _internal.text)(", 2019");
+      t5 = (0, _internal.text)(", 2019");
+      t6 = (0, _internal.space)();
+      a1 = (0, _internal.element)("a");
+      svg = (0, _internal.svg_element)("svg");
+      path = (0, _internal.svg_element)("path");
       (0, _internal.add_location)(main, file, 7, 2, 120);
-      (0, _internal.add_location)(sup, file, 10, 38, 199);
-      (0, _internal.add_location)(footer, file, 10, 2, 163);
+      (0, _internal.attr_dev)(a0, "href", "https://github.com/alex-parra/");
+      (0, _internal.attr_dev)(a0, "target", "_blank");
+      (0, _internal.add_location)(a0, file, 12, 12, 185);
+      (0, _internal.add_location)(sup, file, 12, 93, 266);
+      (0, _internal.add_location)(footer, file, 11, 2, 164);
+      (0, _internal.attr_dev)(path, "fill-rule", "evenodd");
+      (0, _internal.attr_dev)(path, "d", "M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z");
+      (0, _internal.add_location)(path, file, 17, 6, 520);
+      (0, _internal.attr_dev)(svg, "class", "octicon octicon-mark-github v-align-middle");
+      (0, _internal.attr_dev)(svg, "viewBox", "0 0 16 16");
+      (0, _internal.attr_dev)(svg, "version", "1.1");
+      (0, _internal.attr_dev)(svg, "aria-hidden", "true");
+      (0, _internal.add_location)(svg, file, 16, 4, 404);
+      (0, _internal.attr_dev)(a1, "class", "gitHub");
+      (0, _internal.attr_dev)(a1, "href", "https://github.com/alex-parra/svelte-google-search-clone");
+      (0, _internal.attr_dev)(a1, "target", "_blank");
+      (0, _internal.add_location)(a1, file, 15, 2, 301);
       (0, _internal.attr_dev)(div, "class", "appRoot");
       (0, _internal.add_location)(div, file, 5, 0, 95);
     },
@@ -4343,8 +4486,14 @@ function create_fragment(ctx) {
       (0, _internal.append_dev)(div, t0);
       (0, _internal.append_dev)(div, footer);
       (0, _internal.append_dev)(footer, t1);
-      (0, _internal.append_dev)(footer, sup);
+      (0, _internal.append_dev)(footer, a0);
       (0, _internal.append_dev)(footer, t3);
+      (0, _internal.append_dev)(footer, sup);
+      (0, _internal.append_dev)(footer, t5);
+      (0, _internal.append_dev)(div, t6);
+      (0, _internal.append_dev)(div, a1);
+      (0, _internal.append_dev)(a1, svg);
+      (0, _internal.append_dev)(svg, path);
       current = true;
     },
     p: _internal.noop,
@@ -4439,7 +4588,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53591" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56786" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

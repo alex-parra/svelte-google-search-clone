@@ -117,4 +117,17 @@ button:focus {
   margin: 0 3px;
 }
 
+.gitHub {
+  position: fixed;
+  top: 15px;
+  right: 12px;
+  opacity: 0.5;
+}
+.gitHub svg {
+  width: 26px;
+}
+.gitHub:hover {
+  opacity: 1;
+}
+
 /*# sourceMappingURL=/styles.5c32a3d8.css.map */
