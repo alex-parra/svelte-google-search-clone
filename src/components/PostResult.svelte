@@ -54,6 +54,7 @@
       <a href={post.url} target="_blank">{post.title}</a>
     </h2>
     <p class="infos">
+      <span class="postId"># {post.id}</span>
       <span class="user">@ {post.user}</span>
       <span class="timeAgo"><SvgClock /> {post.time_ago}</span>
       <span class="commentsCount"><SvgComment /> {post.comments_count}</span>
